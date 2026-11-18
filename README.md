@@ -9,18 +9,14 @@ VALOR is a unified security-automation platform that cuts SOC alert fatigue and 
 ---
 
 ## Table of contents
+
 - [Components](#components)
 - [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
-- [Repository structure](#repository-structure)
-- [Screenshots](#screenshots)
 - [Roadmap](#roadmap)
-- [Team](#team)
 - [License](#license)
 
 ---
-
-
 
 ## Components
 
@@ -150,32 +146,6 @@ Set the n8n credentials (Qdrant, Elasticsearch, Ollama, Discord, threat-intel AP
 
 ---
 
-## Repository structure
-
-```text
-valor/
-├── docker-compose.yml
-├── .env.example
-├── workflows/          # n8n workflow exports
-├── ueba/               # FastAPI backend, models, React dashboard
-├── simulation/         # UEBA persona log generators, synthetic Wazuh alerts
-├── android-app/        # Kotlin / Jetpack Compose app
-└── docs/               # Full project documentation
-```
-
-> Adjust to match your actual layout.
-
----
-
-## Screenshots
-
-<!-- Add images to docs/images and link them here -->
-| SOC dashboard | UEBA dashboard | Mobile app |
-|---|---|---|
-| ![SOC dashboard](docs/images/soc-dashboard.png) | ![UEBA](docs/images/ueba.png) | ![App](docs/images/app.png) |
-
----
-
 ## Roadmap
 
 - [x] AI SOC analyst with dual-RAG and analyst feedback loop
@@ -190,8 +160,6 @@ valor/
 
 ---
 
-
-
 ## License
 
-Released under the [MIT License](LICENSE). Replace if you choose a different license.
+Released under the [MIT License](LICENSE).
