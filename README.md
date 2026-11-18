@@ -1,6 +1,6 @@
 # VALOR — AI-Powered Security Operations Platform
 
-> **VALOR does not react to threats. It prevents them.**
+> **VALOR does not just react to threats. It prevents them.**
 
 VALOR is a unified security-automation platform that cuts SOC alert fatigue and shortens response time. It combines an **AI SOC analyst** (SOAR workflows on n8n), a **UEBA engine** for insider-threat detection, an **automated phishing-email investigation** flow, a **deterministic decision engine**, and an **Android app** that intercepts malicious links and files before the user opens them. LLM reasoning runs **on-premises** (Ollama), so sensitive telemetry never leaves your environment.
 
@@ -23,45 +23,8 @@ VALOR is a unified security-automation platform that cuts SOC alert fatigue and 
 ---
 
 ## Architecture
+![Uploading ChatGPT Image Aug 24, 2026, 02_04_36 PM.png…]()
 
-```mermaid
-flowchart TB
-    subgraph Sources
-        W[Wazuh / Syslog]
-        G[Gmail - reported phishing]
-        M[VALOR Android app]
-        L[Endpoint & network logs]
-    end
-
-    subgraph VALOR["VALOR platform"]
-        AI["AI SOC Analyst<br/>(n8n SOAR workflow)"]
-        PH["Phishing investigation"]
-        UE["UEBA engine + dashboard"]
-        DE["Decision engine"]
-    end
-
-    subgraph Infra["Core infrastructure (Docker)"]
-        Q[(Qdrant)]
-        O[Ollama]
-        E[(Elasticsearch)]
-    end
-
-    W --> AI
-    G --> PH
-    M -->|webhook| AI
-    L --> UE
-    AI <--> Q
-    AI <--> O
-    AI --> E
-    PH --> O
-    AI --> DE
-    PH --> DE
-    UE --> DE
-    DE --> R["FortiGate / EDR / Email security"]
-    DE --> N[Discord notification]
-```
-
----
 
 ## Components
 
