@@ -9,8 +9,6 @@ VALOR is a unified security-automation platform that cuts SOC alert fatigue and 
 ---
 
 ## Table of contents
-
-- [Architecture](#architecture)
 - [Components](#components)
 - [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
@@ -22,8 +20,6 @@ VALOR is a unified security-automation platform that cuts SOC alert fatigue and 
 
 ---
 
-## Architecture
-![Uploading ChatGPT Image Aug 24, 2026, 02_04_36 PM.png…]()
 
 
 ## Components
